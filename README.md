@@ -26,8 +26,21 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   -- provide == React.Context
 
 # Video 7-8: Building a Data-driven component
-- **Video 7 ** 
+- **Video 7** 
   -- Using GraphQL and connected mongoDB to display a list of data for available crafts.  Did a bit of styling to clean it up as well
 - **Video 8 **
   -- Breaking out the line item into its own comonent and doing some styling 
 
+# Video 9-12 Vue Routing
+- **Video 9**
+  -- Creating simple routes
+- **Video 10**
+  --Dynamic route and getting the id off the route
+- **Video 11**
+  -- Doing more with the template literal to display what was passed in
+- **Video 12**
+  -- Running a graphQL query using the id passed in via the router
+  -- I was able to get about 90% of the way to the end of this without having to watch the tutorial
+    --- Did not figure out the `useRouter` part made an assumption about `$router` that was incorrect
+    --- Didn't set up the GraphQL query correctly to receive the param (forgot that from the building GraphQL queries tutorial from earlier this week)
+  -- Built my own inital table to display data.  Looks like I'll need to update it before doing video 13.  Practiced with `v-if` to show owner data if available, otherwise showed purchasing information

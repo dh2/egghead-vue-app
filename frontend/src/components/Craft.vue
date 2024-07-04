@@ -7,11 +7,11 @@ defineProps({
 
 <template>
     <li :class="craft.owner ? 'owned': 'for-sale'">
-        <p>
+        <router-link :to="`/craft/${craft.id}`">
             {{ craft.name }}
             <span v-if="craft.owner">is owned by {{ `${craft.owner.firstName} ${craft.owner.lastName}` }}</span>
-            <span v-else>is available to buy and cost ${{ craft.price.toLocaleString("us") }}</span>
-        </p>
+            <span v-else> Buy It ${{ craft.price.toLocaleString("us") }}</span>
+        </router-link>
     </li>
 </template>
 
@@ -29,5 +29,10 @@ li {
     border: 1px black solid;
     border-radius: 4px;
     padding: 6px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 </style>
