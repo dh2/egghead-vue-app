@@ -25,7 +25,9 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   -- implementing the community graphql composable and making it available to the entire app
   -- provide == React.Context
 
-# Video 7: Building a Data-driven component
-Using GraphQL and connected mongoDB to display a list of data for available crafts.  Did a bit of styling to clean it up as well
-
+# Video 7-8: Building a Data-driven component
+- **Video 7 ** 
+  -- Using GraphQL and connected mongoDB to display a list of data for available crafts.  Did a bit of styling to clean it up as well
+- **Video 8 **
+  -- Breaking out the line item into its own comonent and doing some styling 
 
