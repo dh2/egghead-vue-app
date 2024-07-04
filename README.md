@@ -29,7 +29,12 @@ Getting the different tech stacks set up for the frontend and backend for the ap
 - **Video 7** 
   - Using GraphQL and connected mongoDB to display a list of data for available crafts.  Did a bit of styling to clean it up as well
 - **Video 8 **
-  - Breaking out the line item into its own comonent and doing some styling 
+  - Breaking out the line item into its own comonent and doing some styling
+
+ ## Screen Shots
+
+ ### Craft Page
+![image](https://github.com/dh2/egghead-vue-app/assets/25743/572f4564-6f6e-49a1-aa06-43a20fb336a4)
 
 # Video 9-12 Vue Routing
 - **Video 9**
@@ -44,3 +49,11 @@ Getting the different tech stacks set up for the frontend and backend for the ap
     - Did not figure out the `useRouter` part made an assumption about `$router` that was incorrect
     - Didn't set up the GraphQL query correctly to receive the param (forgot that from the building GraphQL queries tutorial from earlier this week)
   - Built my own inital table to display data.  Looks like I'll need to update it before doing video 13.  Practiced with `v-if` to show owner data if available, otherwise showed purchasing information
+ 
+  ## Screen Shots
+  ### Craft w/o Owner
+  ![image](https://github.com/dh2/egghead-vue-app/assets/25743/85ce90d7-4d6c-421e-8b81-82e74234a6f6)
+
+  ### Craft w/ Owner
+  ![image](https://github.com/dh2/egghead-vue-app/assets/25743/c2b2520b-8b8b-4983-8c5b-1cd8ea2517a1)
+
