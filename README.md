@@ -7,40 +7,40 @@ This stack is something I'm considering for an actual project (thought I'm not m
 Getting the different tech stacks set up for the frontend and backend for the application.
 
 - **Video 1 MongoDB** 
-  -- I had to install MongoDB locally to begin with since it wasn't on my local machine.  Worked out well because I'd been meaning to resolve that dependency for future projects/learning.
+  - I had to install MongoDB locally to begin with since it wasn't on my local machine.  Worked out well because I'd been meaning to resolve that dependency for future projects/learning.
 - **Video 2 Vue3 and Vite** 
-  -- First time using Vite to build a project.  I like the flexibility out of the box to do several types of development.  
-  -- Getting the app up and running was quick and easy
+  - First time using Vite to build a project.  I like the flexibility out of the box to do several types of development.  
+  - Getting the app up and running was quick and easy
 - **Video 3 Setting up Apollo Client with Vue3** 
-  -- stumbled a bit here as the tutorial had the import from `apollo/client` but quick google search on the error said to import from `apollo/client/core` instead and I was in business
+  - stumbled a bit here as the tutorial had the import from `apollo/client` but quick google search on the error said to import from `apollo/client/core` instead and I was in business
 - **Video 4 comparing component composition options** 
-  -- Setup Script vs OptionsAPI
-  -- Much prefer the Setup Script, very clean code
+  - Setup Script vs OptionsAPI
+  - Much prefer the Setup Script, very clean code
 
 # Video 5-6: Composables
 - **Video 5 Creation** 
-  -- Vue3 encapsulated logic with composables
-  -- Made very understandable by relating to React hooks
+  - Vue3 encapsulated logic with composables
+  - Made very understandable by relating to React hooks
 - **Video 6 GraphQL Composable** 
-  -- implementing the community graphql composable and making it available to the entire app
-  -- provide == React.Context
+  - implementing the community graphql composable and making it available to the entire app
+  - provide == React.Context
 
 # Video 7-8: Building a Data-driven component
 - **Video 7** 
-  -- Using GraphQL and connected mongoDB to display a list of data for available crafts.  Did a bit of styling to clean it up as well
+  - Using GraphQL and connected mongoDB to display a list of data for available crafts.  Did a bit of styling to clean it up as well
 - **Video 8 **
-  -- Breaking out the line item into its own comonent and doing some styling 
+  - Breaking out the line item into its own comonent and doing some styling 
 
 # Video 9-12 Vue Routing
 - **Video 9**
-  -- Creating simple routes
+  - Creating simple routes
 - **Video 10**
-  --Dynamic route and getting the id off the route
+  -Dynamic route and getting the id off the route
 - **Video 11**
-  -- Doing more with the template literal to display what was passed in
+  - Doing more with the template literal to display what was passed in
 - **Video 12**
-  -- Running a graphQL query using the id passed in via the router
-  -- I was able to get about 90% of the way to the end of this without having to watch the tutorial
-    --- Did not figure out the `useRouter` part made an assumption about `$router` that was incorrect
-    --- Didn't set up the GraphQL query correctly to receive the param (forgot that from the building GraphQL queries tutorial from earlier this week)
-  -- Built my own inital table to display data.  Looks like I'll need to update it before doing video 13.  Practiced with `v-if` to show owner data if available, otherwise showed purchasing information
+  - Running a graphQL query using the id passed in via the router
+  - I was able to get about 90% of the way to the end of this without having to watch the tutorial
+    - Did not figure out the `useRouter` part made an assumption about `$router` that was incorrect
+    - Didn't set up the GraphQL query correctly to receive the param (forgot that from the building GraphQL queries tutorial from earlier this week)
+  - Built my own inital table to display data.  Looks like I'll need to update it before doing video 13.  Practiced with `v-if` to show owner data if available, otherwise showed purchasing information
