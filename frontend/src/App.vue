@@ -2,11 +2,11 @@
 </script>
 
 <template>
-  <div id="nav">
-    <h1>Welcome to Kayak store</h1>
+  <nav id="nav">
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
-  </div>
+  </nav>
+  <h1>Welcome to Kayak store</h1>
   <router-view />
 </template>
 
