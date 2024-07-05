@@ -46,7 +46,7 @@ const showModal = ref(false);
 <style scoped>
 .modal {
   position: fixed;
-  top: 25%;
+  top: 50%;
   left: 50%;
   height: 400px;
   width: 600px;

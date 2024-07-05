@@ -69,3 +69,12 @@ Getting the different tech stacks set up for the frontend and backend for the ap
 - **Video 15**
   - Updating the form to use `v-model` to bind craft into the form in order to use it for future updates
   - Building out the form more completely to set it up for Mutation processing 
+
+# Video 16-18  Managing mutating data
+- **Video 16**
+  - Creating the mutation in graphiql
+  - Had to update the graphQL server because some code in the `updateCraft` mutation was erroneously commented out.  My guess is that the video 20 error handling was the final commit and it was never put back to the passing version. 
+- **Video 17**
+  - take mutation into the Vue setup and use the `useMutation` to call the mutation end point and change the data
+  - At this juncture data still has to be refreshed manually
+
