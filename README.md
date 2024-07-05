@@ -67,4 +67,5 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   - ![image](https://github.com/dh2/egghead-vue-app/assets/25743/74d85368-4e8e-46d6-9ab3-419bf49fe2b4)
 
 - **Video 15**
-  - Updating the form to use `v-modal` instead of hard coding it
+  - Updating the form to use `v-model` to bind craft into the form in order to use it for future updates
+  - Building out the form more completely to set it up for Mutation processing 
