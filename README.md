@@ -68,4 +68,6 @@ Getting the different tech stacks set up for the frontend and backend for the ap
 
 - **Video 15**
   - Updating the form to use `v-model` to bind craft into the form in order to use it for future updates
-  - Building out the form more completely to set it up for Mutation processing 
+  - Building out the form more completely to set it up for Mutation processing
+  - ![image](https://github.com/dh2/egghead-vue-app/assets/25743/7008b669-de0c-4cac-a6a6-02cfd1713a54)
+
