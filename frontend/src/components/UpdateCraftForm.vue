@@ -26,7 +26,7 @@ mutation (
     }
 }`;
  
-const emit = defineEmits(['close']);
+const emit = defineEmits(['close', 'updated']);
 const updateFields = reactive({ ...props.craft });
 const { mutate: updateCraft} = useMutation(updateMutation, () => ({
   variables: {
@@ -35,9 +35,9 @@ const { mutate: updateCraft} = useMutation(updateMutation, () => ({
   }
 }));
 
-async function handleSubmit(e) {
+async function handleSubmit() {
   await updateCraft();
-  emit('close');
+  emit('updated');
 }
 </script>
 

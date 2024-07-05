@@ -23,10 +23,16 @@ query ($id: ID){
   }
 }`
 
-const { result } = useQuery(craftQuery, {id: route.params.id});
+const { result, refetch: refetchCraft } = useQuery(craftQuery, {id: route.params.id});
 const craft = useResult(result, null, craft => craft.Craft);
 
 const showModal = ref(false);
+
+
+function handleUpdated() {
+  showModal.value = false;
+  refetchCraft();
+}
 </script>
 
 <template>
@@ -37,7 +43,7 @@ const showModal = ref(false);
         <p v-else>This craft is available for purchase</p>
         <p><button @click="showModal = !showModal">Update</button></p>
         <div v-if="showModal" class="modal">
-          <div class="modal-inner"><UpdateCraftForm :craft="craft" @close="showModal = !showModal" /></div>
+          <div class="modal-inner"><UpdateCraftForm :craft="craft" @close="showModal = !showModal" @updated="handleUpdated()" /></div>
         </div>
     </section>
     <h2 v-else>Craft not found</h2>

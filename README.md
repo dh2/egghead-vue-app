@@ -77,4 +77,8 @@ Getting the different tech stacks set up for the frontend and backend for the ap
 - **Video 17**
   - take mutation into the Vue setup and use the `useMutation` to call the mutation end point and change the data
   - At this juncture data still has to be refreshed manually
+- **Video 18**
+  - Refetch data automatically using reftech from `useQuery`
+
+# Video 19-21 UX improvements
 
