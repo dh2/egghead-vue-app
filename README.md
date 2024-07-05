@@ -64,5 +64,7 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   - Creating barebones form component
 - **Video 14**
   - Creating actual form, also adding in some buttons and defining/passing actions close action back up to the CraftView
+  - ![image](https://github.com/dh2/egghead-vue-app/assets/25743/74d85368-4e8e-46d6-9ab3-419bf49fe2b4)
+
 - **Video 15**
   - Updating the form to use `v-modal` instead of hard coding it
