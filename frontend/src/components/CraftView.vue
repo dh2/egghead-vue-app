@@ -23,16 +23,27 @@ query ($id: ID){
   }
 }`
 
-const { result, refetch: refetchCraft } = useQuery(craftQuery, {id: route.params.id});
+const { result, refetch: refetchCraftData } = useQuery(craftQuery, {id: route.params.id});
 const craft = useResult(result, null, craft => craft.Craft);
 
 const showModal = ref(false);
 
-
-function handleUpdated() {
+function handleUpdate() {
   showModal.value = false;
-  refetchCraft();
+  refetchCraftData();
 }
+
+const errorMsg =  ref("Hello Error");
+function handleError() {
+  alert('error');
+ errorMsg.value = "There was an error updating the Craft";
+}
+
+function clearError() {
+  alert('Clear');
+  errorMsg.value = "";
+}
+
 </script>
 
 <template>
@@ -41,18 +52,26 @@ function handleUpdated() {
         <p>This craft is {{craft.age}} {{craft.age == 1 ? 'month' : 'months' }} old and costs ${{craft.price}}</p>
         <p v-if="craft.owner">This craft is ownded by {{ craft.owner.firstName}} {{ craft.owner.lastName}}</p>
         <p v-else>This craft is available for purchase</p>
-        <p><button @click="showModal = !showModal">Update</button></p>
+        <p><button @click="showModal = true">Update</button></p>
         <div v-if="showModal" class="modal">
-          <div class="modal-inner"><UpdateCraftForm :craft="craft" @close="showModal = !showModal" @updated="handleUpdated()" /></div>
+          <div class="modal-inner">
+            <UpdateCraftForm 
+              :craft="craft"
+              @close="showModal = !showModal"
+              @updated="handleUpdate()"
+              @craftError="handleError()"
+               />
+          </div>
         </div>
     </section>
     <h2 v-else>Craft not found</h2>
+    <p v-if="errorMsg.length > 0" class="error-message">{{ errorMsg }}<span class="clear" @click="clearError()">X</span></p>
 </template>
 
 <style scoped>
 .modal {
   position: fixed;
-  top: 50%;
+  top: 25%;
   left: 50%;
   height: 400px;
   width: 600px;
@@ -70,5 +89,19 @@ function handleUpdated() {
    height: 100%;
    overflow: auto;
    padding: 4px
+}
+
+.error-message {
+  margin-top: 4px;
+  border: 1px solid #552222;
+  background-color: rgba(255, 150, 150, 0.8);
+  color: #552222;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.clear {
+  cursor:pointer;
+  margin-left: 16px;
 }
 </style>

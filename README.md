@@ -81,4 +81,10 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   - Refetch data automatically using reftech from `useQuery`
 
 # Video 19-21 UX improvements
+- **Video 19**
+  - Trying to do optimistic response but it's not currently working.
+  - When trying to `emit("close")` I can't get the `emit("updated")` to also fire
+- **Video 20**
+  - Error handling
+
 

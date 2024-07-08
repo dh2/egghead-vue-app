@@ -26,17 +26,41 @@ mutation (
     }
 }`;
  
-const emit = defineEmits(['close', 'updated']);
-const updateFields = reactive({ ...props.craft });
-const { mutate: updateCraft} = useMutation(updateMutation, () => ({
-  variables: {
-    ...updateFields,
-    age: Number(updateFields.age),
-  }
-}));
 
+const { mutate: updateCraftData, onError} = useMutation(updateMutation, () => {
+  
+  return {
+    variables: {
+        name: updateFields.name,
+        type: updateFields.type,
+        brand: updateFields.brand,
+        price: updateFields.price,
+        id: updateFields.id,
+        age: Number(updateFields.age),
+    },
+    optimisticResponse: {
+      updateCraft: {
+        name: updateFields.name,
+        type: updateFields.type,
+        brand: updateFields.brand,
+        price: updateFields.price,
+        id: updateFields.id,
+        age: Number(updateFields.age),
+      }
+    }
+  };
+});
+const emit = defineEmits(['close', 'updated', 'craftError']);
+onError(() => {
+  // console.error("There is an error");
+  emit('craftError');
+})
+
+
+const updateFields = reactive({ ...props.craft });
 async function handleSubmit() {
-  await updateCraft();
+  // emit('close');
+  await updateCraftData();
   emit('updated');
 }
 </script>
