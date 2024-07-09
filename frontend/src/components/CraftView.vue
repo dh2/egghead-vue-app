@@ -33,14 +33,12 @@ function handleUpdate() {
   refetchCraftData();
 }
 
-const errorMsg =  ref("Hello Error");
+const errorMsg =  ref("");
 function handleError() {
-  alert('error');
  errorMsg.value = "There was an error updating the Craft";
 }
 
 function clearError() {
-  alert('Clear');
   errorMsg.value = "";
 }
 

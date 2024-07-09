@@ -23,6 +23,16 @@ mutation (
       id: $id
     ) {
       id
+      name
+      type
+      brand
+      price
+      age
+      owner {
+        id
+        firstName
+        lastName
+      }
     }
 }`;
  
@@ -52,14 +62,13 @@ const { mutate: updateCraftData, onError} = useMutation(updateMutation, () => {
 });
 const emit = defineEmits(['close', 'updated', 'craftError']);
 onError(() => {
-  // console.error("There is an error");
   emit('craftError');
 })
 
 
 const updateFields = reactive({ ...props.craft });
 async function handleSubmit() {
-  // emit('close');
+  emit('close');
   await updateCraftData();
   emit('updated');
 }
