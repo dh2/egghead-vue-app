@@ -1,4 +1,4 @@
-# Egghead.io Create Vue3 app with MongoDB and GraphQL
+# Egghead.io Create Vue3 app w/ MongoDB & GraphQL
 This seemed like the next step based on the other tutorials I have done. Hoping to get a good tutorial on linking GraphQL to MongoDB.
 
 This stack is something I'm considering for an actual project (thought I'm not married to Vue yet) so I'm looking forward to seeing all the pieces align.
@@ -88,8 +88,14 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   - got feedback from author [Kevin Cunningham](https://github.com/doingandlearning) and he pointed out I wasn't returning all of the fields in the mutaion return brackets.
 - **Video 20**
   - Error handling
+  - ![image](https://github.com/dh2/egghead-vue-app/assets/25743/96e5ddd5-5a48-40a3-9268-a1aa7dca309c)
+
 - **Video 21**
   - Infinite scroll
+  - ![image](https://github.com/dh2/egghead-vue-app/assets/25743/750f2ccd-ec8a-47c8-b352-1122b8414484)
+  - ![image](https://github.com/dh2/egghead-vue-app/assets/25743/e1538884-7665-4b60-a2ff-6cae5d752c1a)
+
+
 
 ## Thoughts
   This was a very informative tutorial.  Would have liked to have set up some of the GraphQL MVC work but getting connected to Mongo and using GraphQL on the front end was a great exercise.
