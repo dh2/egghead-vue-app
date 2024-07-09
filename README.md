@@ -1,9 +1,9 @@
-#Egghead.io Create Vue3 app with MongoDB and GraphQL
+# Egghead.io Create Vue3 app with MongoDB and GraphQL
 This seemed like the next step based on the other tutorials I have done. Hoping to get a good tutorial on linking GraphQL to MongoDB.
 
 This stack is something I'm considering for an actual project (thought I'm not married to Vue yet) so I'm looking forward to seeing all the pieces align.
 
-# Videos 1-4 Setup
+## Videos 1-4 Setup
 Getting the different tech stacks set up for the frontend and backend for the application.
 
 - **Video 1 MongoDB** 
@@ -17,7 +17,7 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   - Setup Script vs OptionsAPI
   - Much prefer the Setup Script, very clean code
 
-# Video 5-6: Composables
+## Video 5-6: Composables
 - **Video 5 Creation** 
   - Vue3 encapsulated logic with composables
   - Made very understandable by relating to React hooks
@@ -25,18 +25,18 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   - implementing the community graphql composable and making it available to the entire app
   - provide == React.Context
 
-# Video 7-8: Building a Data-driven component
+## Video 7-8: Building a Data-driven component
 - **Video 7** 
   - Using GraphQL and connected mongoDB to display a list of data for available crafts.  Did a bit of styling to clean it up as well
 - **Video 8 **
   - Breaking out the line item into its own comonent and doing some styling
 
- ## Screen Shots
+ ### Screen Shots
 
- ### Craft Page
+ #### Craft Page
 ![image](https://github.com/dh2/egghead-vue-app/assets/25743/572f4564-6f6e-49a1-aa06-43a20fb336a4)
 
-# Video 9-12 Vue Routing
+## Video 9-12 Vue Routing
 - **Video 9**
   - Creating simple routes
 - **Video 10**
@@ -50,16 +50,16 @@ Getting the different tech stacks set up for the frontend and backend for the ap
     - Didn't set up the GraphQL query correctly to receive the param (forgot that from the building GraphQL queries tutorial from earlier this week)
   - Built my own inital table to display data.  Looks like I'll need to update it before doing video 13.  Practiced with `v-if` to show owner data if available, otherwise showed purchasing information
  
-  ## Screen Shots
-  ### Craft w/o Owner
+  ### Screen Shots
+  #### Craft w/o Owner
   ![image](https://github.com/dh2/egghead-vue-app/assets/25743/85ce90d7-4d6c-421e-8b81-82e74234a6f6)
 
-  ### Craft w/ Owner
+  #### Craft w/ Owner
   ![image](https://github.com/dh2/egghead-vue-app/assets/25743/c2b2520b-8b8b-4983-8c5b-1cd8ea2517a1)
 
 
 
-# Video 13-15 Creating Modal Form for updates
+## Video 13-15 Creating Modal Form for updates
 - **Video 13**
   - Creating barebones form component
 - **Video 14**
@@ -71,7 +71,7 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   - Building out the form more completely to set it up for Mutation processing 
   - ![image](https://github.com/dh2/egghead-vue-app/assets/25743/7008b669-de0c-4cac-a6a6-02cfd1713a54)
 
-# Video 16-18  Managing mutating data
+## Video 16-18  Managing mutating data
 - **Video 16**
   - Creating the mutation in graphiql
   - Had to update the graphQL server because some code in the `updateCraft` mutation was erroneously commented out.  My guess is that the video 20 error handling was the final commit and it was never put back to the passing version. 
@@ -81,7 +81,7 @@ Getting the different tech stacks set up for the frontend and backend for the ap
 - **Video 18**
   - Refetch data automatically using reftech from `useQuery`
 
-# Video 19-21 UX improvements
+## Video 19-21 UX improvements
 - **Video 19**
   - Trying to do optimistic response but it's not currently working.
   - When trying to `emit("close")` I can't get the `emit("updated")` to also fire
@@ -90,3 +90,8 @@ Getting the different tech stacks set up for the frontend and backend for the ap
   - Error handling
 - **Video 21**
   - Infinite scroll
+
+## Thoughts
+  This was a very informative tutorial.  Would have liked to have set up some of the GraphQL MVC work but getting connected to Mongo and using GraphQL on the front end was a great exercise.
+
+  I'm really starting to like Vue3 especially the composition method of building components 
