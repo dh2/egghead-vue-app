@@ -35,6 +35,7 @@ function handleUpdate() {
 
 const errorMsg =  ref("");
 function handleError() {
+  alert();
  errorMsg.value = "There was an error updating the Craft";
 }
 

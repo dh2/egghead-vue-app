@@ -20,7 +20,7 @@ mutation (
       brand: $brand,
       price: $price,
       age: $age,
-      id: $id
+      id: $id,
     ) {
       id
       name
@@ -36,6 +36,8 @@ mutation (
     }
 }`;
  
+const updateFields = reactive({ ...props.craft });
+const emit = defineEmits(['close', 'updated', 'craftError']);
 
 const { mutate: updateCraftData, onError} = useMutation(updateMutation, () => {
   
@@ -47,28 +49,24 @@ const { mutate: updateCraftData, onError} = useMutation(updateMutation, () => {
         price: updateFields.price,
         id: updateFields.id,
         age: Number(updateFields.age),
-    },
-    optimisticResponse: {
-      updateCraft: {
-        name: updateFields.name,
-        type: updateFields.type,
-        brand: updateFields.brand,
-        price: updateFields.price,
-        id: updateFields.id,
-        age: Number(updateFields.age),
-      }
+      },
+      optimisticResponse: {
+        updateCraft: {
+         ...updateFields
+        }
     }
   };
 });
-const emit = defineEmits(['close', 'updated', 'craftError']);
+
 onError(() => {
+  alert('onError');
   emit('craftError');
 })
 
 
-const updateFields = reactive({ ...props.craft });
+
 async function handleSubmit() {
-  emit('close');
+  // emit('close');
   await updateCraftData();
   emit('updated');
 }
@@ -96,6 +94,7 @@ async function handleSubmit() {
         <label for="craftType">Type</label>
         <input type="text"  id="craftType" v-model="updateFields.type" />
       </div>
+      <input type="hidden" id="craftOwner" v-model="updateFields.owner" />
 
   </form>
   <button @click="emit('close')">Cancel</button>

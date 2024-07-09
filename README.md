@@ -85,5 +85,8 @@ Getting the different tech stacks set up for the frontend and backend for the ap
 - **Video 19**
   - Trying to do optimistic response but it's not currently working.
   - When trying to `emit("close")` I can't get the `emit("updated")` to also fire
+  - got feedback from author [Kevin Cunningham](https://github.com/doingandlearning) and he pointed out I wasn't returning all of the fields in the mutaion return brackets.
 - **Video 20**
   - Error handling
+- **Video 21**
+  - Infinite scroll
